@@ -1,0 +1,16 @@
+comodore       BETA: Emitowanie systemu comodore 64 (Nie poleca się używania tej komendy)
+exit           Wyłącza system
+activate       aktywacja klucza produktu
+reboot         Ponownie uruchamia system
+update         narzędzie do aktyłalizacji systemu.
+kalkulator     zwykły kalkulator w bat ;)
+osinfo         info o systemie
+MyCityLegacy   gra wykonana przez mojego kolege :) (legacy)
+zegar          automatycznie odświerzany zegar (NIE ZALECANE)
+testvirus      Baza danych wirusów (emulacja)
+themePlus      motyw z dodatku Plus!
+testCrash      Wywołuje błąd systemu
+cls            czyści ekran
+dir            pokazuje zawartość folderu ze systemem
+gui            włącza GUI
+notepad        notatnik (vim)
