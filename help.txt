@@ -13,4 +13,6 @@ testCrash      Wywołuje błąd systemu
 cls            czyści ekran
 dir            pokazuje zawartość folderu ze systemem
 gui            włącza GUI
-notepad        notatnik (vim)
+vim            vim
+Notatki        Notatnik
+creators       twórcy

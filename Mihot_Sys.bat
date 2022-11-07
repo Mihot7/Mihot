@@ -1,7 +1,7 @@
 @echo off
 call SendKey "{f11}"
 set Mihot_Sys_Location=%cd%
-title Mihot 8.0 
+title Mihot 8.1 
 color 07
 set lang=pl_PL
 chcp 65001
@@ -12,7 +12,7 @@ cls
 color 07
 type logo.txt
 echo.
-echo Starting Mihot 8.0!...
+echo Starting Mihot 8.1!...
 ping localhost -n 5 >nul
 chcp 65001
 call PlaySound "%mihot_sys_location%\sounds\startup.wav"
@@ -20,6 +20,7 @@ echo Witamy, %username% czas: %time%
 goto consolestartup
 
 :consolestartup
+title Mihot 8.1
 color 07
 echo Mihot console
 echo Run help for commands.
@@ -29,7 +30,7 @@ goto console
 :console
 set /p com=Command:
 if %com%==help goto helpconsole&& pause>nul && goto console
-if %com%==notepad goto vim&& pause>nul && goto console
+if %com%==vim goto vim&& pause>nul && goto console
 if %com%==testvirus goto VirusT&& pause>nul && goto console
 if %com%==zegar goto time&& pause>nul && goto console
 if %com%==MyCityLegacy goto graolka&& pause>nul && goto console
@@ -49,6 +50,8 @@ if %com%==tree goto tree && pause>nul && goto console
 if %com%==gui call GUI && goto console
 if %com%==testCrash set ERRORCODE=FORCED_TO_CRASH && goto error
 if %com%==MyCityLegacy goto graolka2&& pause>nul && goto console
+if %com%==notatki goto notatki&& pause>nul && goto console
+if %com%==creators goto creators&& pause>nul && goto console
 call %com%
 goto console
 
@@ -157,9 +160,10 @@ pause
 goto console
 
 :ver
-echo Wersja systemu 8.0
+echo Wersja systemu 8.1
 echo Mihot Corp. 2014-2022
 echo Powered by MatOS
+echo I will miss you NotAdidel
 pause
 goto console
 
@@ -471,3 +475,158 @@ exit
 :vim
 vim.exe
 exit /b
+
+:notatki
+@echo off
+color 0a
+set name=Bez Nazwy
+title %name% - Mihot Notepad - Mihot 8.1
+:options
+cls
+echo ________________________________________
+echo.
+echo             Mihot Notepad
+echo ________________________________________
+echo - %name%
+echo.
+echo Naciśnij 0 jak chcesz edytować istniejący plik.
+echo Naciśnij 1 jak chcesz zmienić nazwę pliku.
+echo Naciśnij 2 jak chcesz edytować dokument.
+echo Naciśnij 3 jak potrzebujesz pomocy!
+echo A 4 jak chcesz wyjść
+
+set /p wybór=">"
+if %wybór%==1 goto 1
+if %wybór%==2 goto 2
+if %wybór%==3 goto help
+if %wybór%==4 goto 4
+if %wybór%==0 goto 0
+
+cls
+echo *****************************************
+echo Przepraszam, ale chyba cie nie rozumiem?*
+echo *****************************************
+ping localhost -n 2 >nul
+goto options
+
+:1
+cls
+echo ________________________________________
+echo.
+echo             Mihot Notepad
+echo ________________________________________
+echo - %name%
+echo. 
+echo Nazwij dokument np. 'hello.txt' lub 'hello.bat'
+set /p name=">"
+title %name% - Mihot Notepad
+
+goto options
+
+:2
+cls
+echo ________________________________________
+echo.
+echo             Mihot Notepad
+echo ________________________________________
+echo - %name%
+echo. 
+echo Aby dodać nową linie kilknij enter
+echo Jak chcesz skończyć pisać kilknij wielki czerwony x w rogu ekranu
+echo.
+echo "   > < |   " Tego NIE urzywaj bo wywalisz system
+echo.
+set /p content=">"
+echo %content%>>%name%
+cls
+echo Save Successful!
+ping localhost -n 2 >nul
+goto 2
+
+:help
+cls
+echo ________________________________________
+echo.
+echo             Mihot Notepad
+echo ________________________________________
+echo Nazwa pliku - %name%
+echo. 
+echo Jakieś pytania? Discord: Mihot7#2918
+echo 
+echo.
+pause
+goto options
+
+:4
+cls
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo.
+echo __Made by Mihot_________________________
+echo.
+echo             Mihot Notepad
+echo ________________________________________
+echo     Fajny notatnik
+ping localhost -n 5 >nul
+goto console
+
+:0
+cls
+echo ________________________________________
+echo.
+echo             Mihot Notepad
+echo ________________________________________
+echo - %name%
+echo. 
+echo Wpisz w nazwe np. 'hello.txt' lub 'hello.bat'
+echo Plik musi być w tej samej lokalizacji co pliki systemu mihot.
+set /p edit=">"
+edit %edit%
+goto options
+
+:creators
+Color 4F
+ping localhost -n 1 >nul
+Color 6A
+ping localhost -n 1 >nul
+color 5c
+ping localhost -n 1 >nul
+color 0a
+echo Mihot7 zd. superkolo2010 - Komendy (większość)
+ping localhost -n 5 >nul
+cls
+color 5D
+ping localhost -n 2 >nul
+color 2a
+ping localhost -n 2 >nul
+color 4d
+ping localhost -n 2 >nul
+color 0a
+echo Toffix zd. Chudini2010 - Gry
+ping localhost -n 5 >nul
+cls
+color 6c
+ping localhost -n 2 >nul
+color 8a
+ping localhost -n 2 >nul
+color 3c
+ping localhost -n 2 >nul
+color 0a
+echo NotAdidel - Gui, dzwięki, logo uruchamiania, nowe ekrany zamykania i błędu
+ping localhost -n 5 >nul
+cls
+color 1c
+ping localhost -n 2 >nul
+color 7a
+ping localhost -n 2 >nul
+color 8c
+ping localhost -n 2 >nul
+color 0a
+echo Pseudo zd. Pseudostudios - MatOS comodor
+ping localhost -n 5 >nul
+goto console
