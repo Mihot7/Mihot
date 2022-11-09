@@ -478,124 +478,60 @@ exit /b
 
 :notatki
 @echo off
-color 0a
-set name=Bez Nazwy
-title %name% - Mihot Notepad - Mihot 8.1
-:options
+title Word Processor
+:MAIN
 cls
-echo ________________________________________
-echo.
-echo             Mihot Notepad
-echo ________________________________________
-echo - %name%
-echo.
-echo Naciśnij 0 jak chcesz edytować istniejący plik.
-echo Naciśnij 1 jak chcesz zmienić nazwę pliku.
-echo Naciśnij 2 jak chcesz edytować dokument.
-echo Naciśnij 3 jak potrzebujesz pomocy!
-echo A 4 jak chcesz wyjść
-
-set /p wybór=">"
-if %wybór%==1 goto 1
-if %wybór%==2 goto 2
-if %wybór%==3 goto help
-if %wybór%==4 goto 4
-if %wybór%==0 goto 0
-
+echo view - pokarz plik
+echo new - nowy plik
+echo exit - wróć do konsoli
+echo delete - usuwanie plików
+set /p input=Command-
+if %input%==view goto view
+if %input%==new goto new
+if %input%==exit goto console
+if %input%==edit goto edit
+if %input%==help goto help
+if %input%==delete goto delete
+:new
 cls
-echo *****************************************
-echo Przepraszam, ale chyba cie nie rozumiem?*
-echo *****************************************
-ping localhost -n 2 >nul
-goto options
-
-:1
+set /p words=Type-
+set /p name=Name-
+echo %words% >> %name%.txt
+pause >nul
+goto MAIN
+:view
 cls
-echo ________________________________________
-echo.
-echo             Mihot Notepad
-echo ________________________________________
-echo - %name%
-echo. 
-echo Nazwij dokument np. 'hello.txt' lub 'hello.bat'
-set /p name=">"
-title %name% - Mihot Notepad
-
-goto options
-
-:2
+set /p file=File to open (without .txt)-
 cls
-echo ________________________________________
-echo.
-echo             Mihot Notepad
-echo ________________________________________
-echo - %name%
-echo. 
-echo Aby dodać nową linie kilknij enter
-echo Jak chcesz skończyć pisać kilknij wielki czerwony x w rogu ekranu
-echo.
-echo "   > < |   " Tego NIE urzywaj bo wywalisz system
-echo.
-set /p content=">"
-echo %content%>>%name%
-cls
-echo Save Successful!
-ping localhost -n 2 >nul
-goto 2
-
+type %file%.txt
+pause >nul
+goto MAIN
 :help
 cls
-echo ________________________________________
-echo.
-echo             Mihot Notepad
-echo ________________________________________
-echo Nazwa pliku - %name%
-echo. 
-echo Jakieś pytania? Discord: Mihot7#2918
-echo 
-echo.
-pause
-goto options
-
-:4
+type help.txt
+pause >nul
+goto MAIN
+:edit
 cls
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo.
-echo __Made by Mihot_________________________
-echo.
-echo             Mihot Notepad
-echo ________________________________________
-echo     Fajny notatnik
-ping localhost -n 5 >nul
+echo Not Yet Implemented
+pause >nul
+exit
+:delete
+cls
+set /p del=File to Delete-
+del %del%.txt
+echo Deleted...
+pause >nul
+goto MAIN
 goto console
-
-:0
-cls
-echo ________________________________________
-echo.
-echo             Mihot Notepad
-echo ________________________________________
-echo - %name%
-echo. 
-echo Wpisz w nazwe np. 'hello.txt' lub 'hello.bat'
-echo Plik musi być w tej samej lokalizacji co pliki systemu mihot.
-set /p edit=">"
-edit %edit%
-goto options
 
 :creators
 Color 4F
-ping localhost -n 1 >nul
+ping localhost -n 2 >nul
 Color 6A
-ping localhost -n 1 >nul
+ping localhost -n 2 >nul
 color 5c
-ping localhost -n 1 >nul
+ping localhost -n 2 >nul
 color 0a
 echo Mihot7 zd. superkolo2010 - Komendy (większość)
 ping localhost -n 5 >nul
