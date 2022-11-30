@@ -1,2 +1,2 @@
 # Mihot
-Mihot is a "operating system" in batch!
+Mihot is an "operating system" in batch!
