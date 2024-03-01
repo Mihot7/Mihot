@@ -1,0 +1,20 @@
+exit           Wyłącza system
+reboot         Ponownie uruchamia system
+update         Uruchamia domyślną przeglądarke, oraz wyświetla changelog najnowszej wersji.
+calc           Kalkulator.
+osinfo         Informacje o wersji systemu oraz o jego twórcy.
+MyCityLegacy   Stwórz swoje miasto, baw sie do woli! (Legacy)
+zegar          Pokazuje aktualną godzine.
+testvirus      Baza wirusów w batch.
+testCrash      Wywołuje błąd systemu.
+cls            Czyści ekran.
+usrdir         Pokazuje folder userfiles. (Znajdują sie tam pliki użytkownika.)
+notatki        Edytor tekstu
+creators       Twórcy systemu Mihot.
+music          MihotMusic 2.1
+WhatIsNew      Wyświetla changelog.
+MyCity         Stwórz swoje miasto, baw sie do woli! (Remaster)
+settings       Ustawienia systemu Mihot.
+MyCityNew      Stwórz swoje miasto, baw sie do woli! Wersja 1.9.9 Made by Toffix 2023
+discord        Serwer discord, tam udzielam pomocy itd.
+MihotOLD       Uruchamia Mihot 0.2
