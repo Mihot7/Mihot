@@ -1,4 +1,5 @@
 # Mihot
 Mihot is an "operating system" in batch!
-Source code is in realases this code is NO LONGER updated!
-Language: Polish
+It has many app & games and other stuff
+Idk what to type here
+Language POLISH
