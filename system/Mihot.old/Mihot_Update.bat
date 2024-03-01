@@ -31,38 +31,6 @@ echo.
 echo   %procentakt%
 echo.
 ping localhost -n 3 >nul
-set procentakt=10
-ping localhost -n 3 >nul
-set procentakt=28
-ping localhost -n 3 >nul
-set procentakt=35
-ping localhost -n 3 >nul
-set procentakt=43
-ping localhost -n 3 >nul
-set procentakt=59
-ping localhost -n 3 >nul
-set procentakt=67
-ping localhost -n 3 >nul
-set procentakt=89
-ping localhost -n 3 >nul
-set procentakt=90
-ping localhost -n 3 >nul
-set procentakt=91
-ping localhost -n 3 >nul
-set procentakt=95
-ping localhost -n 3 >nul
-set procentakt=100
-ping localhost -n 3 >nul
-set procentakt=100
-ping localhost -n 3 >nul
-set procentakt=100
-ping localhost -n 3 >nul
-set procentakt=100
-ping localhost -n 3 >nul
-set procentakt=100
-ping localhost -n 3 >nul
-set procentakt=100
-ping localhost -n 3 >nul
 set procentakt=100
 echo Aktualizacja ukończona. Naciśnij dowolny klawisz aby wyjść z instalatora i wejść do systemu.
 pause >nul
