@@ -1,0 +1,4 @@
+Dim oPlayer
+Set oPlayer = CreateObject("WMPlayer.OCX")
+
+' Play audio
