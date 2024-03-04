@@ -1,6 +1,5 @@
 exit           Wyłącza system
 reboot         Ponownie uruchamia system
-update         Uruchamia domyślną przeglądarke, oraz wyświetla changelog najnowszej wersji.
 calc           Kalkulator.
 osinfo         Informacje o wersji systemu oraz o jego twórcy.
 MyCityLegacy   Stwórz swoje miasto, baw sie do woli! (Legacy)

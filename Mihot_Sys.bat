@@ -1,6 +1,6 @@
 @echo off
-set ver=14b3
-set kernel=4.79b
+set ver=14
+set kernel=4.79
 cd system
 call SendKey "{f11}"
 set Mihot_Sys_Location=%cd%
@@ -23,6 +23,10 @@ ping localhost -n 5 >nul
 echo Kernel version %kernel%
 chcp 65001
 if %s%==y call PlaySound "%mihot_sys_location%\sounds\startup.wav" 
+echo Projekt Mihot został zakończony.
+echo Nowy LEPSZY OS w batch, nazywa sie MTOS.
+echo Naprawia większość (jak nie wszystkie) bugi Mihot'a.
+echo Aby otrymać więcej informacji wpisz "MTOS" w konsole.
 echo Witamy, %username%! Data i czas: %time%. Co chcesz dziś zrobić?
 goto consolestartup
 
@@ -53,7 +57,6 @@ if %com%==testCrash set ERRORCODE=FORCED_TO_CRASH && goto error
 if %com%==MyCityLegacy goto graolka2&& pause>nul && goto console
 if %com%==notatki goto notatki&& pause>nul && goto console
 if %com%==creators goto creators&& pause>nul && goto console
-if %com%==update goto update && goto console
 if %com%==music goto music && goto console
 if %com%==MyCity goto graolka&& pause>nul && goto console
 if %com%==relme echo szaq&& pause>nul && goto console
@@ -61,6 +64,7 @@ if %com%==settings goto settings&& pause>nul && goto console
 if %com%==MyCityNew goto MyCityNew && goto console
 if %com%==discord start https://discord.gg/TyZZX5CbsN && goto console
 if %com%==MihotOLD goto MihotOLD && goto console
+if %com%==MTOS goto MTOS && goto console
 call %com%
 echo Invalid command. Run help for commands.
 goto console
@@ -291,4 +295,21 @@ cd Mihot.old
 call chooser.bat
 cd ..
 cd ..
+goto console
+
+:MTOS
+echo Iż, system Mihot jest przepełniony błędami, brakiem persolanizaji. (co próbowałem ratować xd)
+echo oraz brakiem repo z apkami (ehem Mihot 10.3).
+echo MTOS posiada dużo więcej funkcji (chociaż portowanie WSZYSTKICH funkcji z Mihot ciągle trwa.).
+echo Nowa platforma jest dużo stabilniejsza.
+echo Razem z tym usuwam polecenie "update" ponieważ już nie posiada sensu.
+echo Dziękujemy, za to wspaniałe 5 lat.
+echo.
+echo Mihot7 - 04.03.2024
+echo.
+echo.
+echo Czy chcesz pobrać MTOS?
+set /p opcja=(y/n):
+if %opcja%==y start https://github.com/Mihot7/MTOS
+if %opcja%==n goto console
 goto console

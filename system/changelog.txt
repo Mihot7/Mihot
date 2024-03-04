@@ -2,10 +2,7 @@ Mihot 14b3
 ------------------------
 Debug Update! 
 ------------------------
-02.03.2024
+04.03.2024
 ------------------------
-1. Made MihotOLD command boot 0.2 & 3.1
-2. MihotOLD now has a "gui"
-3. Now Mihot version is %ver%
-4. Sorry, Adam I failed to adapt your suggestion :/
+Last update ever?
 ---------------------------------------------------------------------------
